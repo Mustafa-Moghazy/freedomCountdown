@@ -1,0 +1,85 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url("f1.jpg") no-repeat center center/cover;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Media query for phones */
+@media (max-width: 768px) {
+  body {
+    background: url("f1.jpg") no-repeat center center/cover;
+    width: 100%;
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.countdown-container {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  margin: 5%;
+  margin-bottom: 300px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: pop 1s infinite;
+}
+
+.label {
+  font-size: 1rem;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
